@@ -1,0 +1,15 @@
+.about-header {
+  background: linear-gradient(to right, #0d6efd, #6610f2);
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.section-title {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.carousel-item {
+  padding: 2rem;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AcademiaX | Contact</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body class="pt-5">
+    {% include 'header.html' %}
+    <header data-aos="fade-down" style="margin-top: 38px; padding: 1rem 1rem; background: linear-gradient(to right, #0d6efd, #6610f2);color: white;text-align: center;">
+      <h1>Contact US</h1>
+      <p>Get in Touch</p>
+    </header>
+    <div class="container my-5" data-aos="fade-up">
+      <h2 class="text-center text-primary mb-4" data-aos="fade-up"></h2>
+      <div class="row" data-aos="fade-up">
+        <div class="col-md-6 mb-4" data-aos="fade-up">
+          <form id="contactForm" novalidate>
+            <div class="mb-3" data-aos="fade-up">
+              <label for="name" class="form-label" data-aos="fade-up">Your Name</label>
+              <input type="text" class="form-control" data-aos="fade-up" id="name" placeholder="Enter your name" required minlength="3" maxlength="50" />
+              <div class="invalid-feedback" data-aos="fade-up">Name must be 3–50 characters and contain only letters.</div>
+            </div>
+            <div class="mb-3" data-aos="fade-up">
+              <label for="email" class="form-label" data-aos="fade-up">Email Address</label>
+              <input type="email" class="form-control" id="email" data-aos="fade-up" placeholder="Enter your email" required />
+              <div class="invalid-feedback" data-aos="fade-up">Please enter a valid email address.</div>
+            </div>
+            <div class="mb-3" data-aos="fade-up">
+              <label for="message" class="form-label" data-aos="fade-up">Your Message</label>
+              <textarea class="form-control" id="message" rows="5" data-aos="fade-up" placeholder="Write your message here..." required minlength="10" maxlength="500"></textarea>
+              <div class="invalid-feedback" data-aos="fade-up">Message must be between 10 and 500 characters.</div>
+            </div>
+            <button type="submit" class="btn btn-primary" data-aos="fade-up">Send Message</button>
+          </form>
+        </div>
+        <div class="col-md-6" data-aos="fade-up">
+          <h5 class="mb-3">AcademiaX Headquarters</h5>
+          <p>
+            <i class="bi bi-geo-alt-fill text-danger me-2" data-aos="fade-up"></i> Golmuri Cum Jugsalai, Jharkhand, India
+          </p>
+          <p>
+            <i class="bi bi-envelope-fill text-success me-2" data-aos="fade-up"></i> support@academiax.edu.in
+          </p>
+          <p>
+            <i class="bi bi-telephone-fill text-info me-2" data-aos="fade-up"></i> +91 98765 43210
+          </p>
+          <div class="ratio ratio-16x9 mt-3" data-aos="fade-up">
+            <iframe src="https://www.google.com/maps?q=Golmuri+Cum+Jugsalai,+Jharkhand&output=embed" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% include 'footer.html' %}
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1055">
+      <div id="formToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+          <div class="toast-body">Message sent successfully!</div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true })
+    </script>
+    <script src="/static/dist/js/contact.js"></script>
+  </body>
+</html>

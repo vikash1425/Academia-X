@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reviews | AcademiaX</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link href="/static/dist/css/reviews.css" rel="stylesheet" />
+  </head>
+  <body class="pt-5">
+    {% include 'header.html' %}
+    <header class="review-header" data-aos="fade-down" style="margin-top: 38px; padding: 1rem 1rem;">
+      <h1>AcademiaX Reviews</h1>
+      <p>Real feedback from our users</p>
+    </header>
+    <div class="container py-4" data-aos="fade-up">
+      <div class="row g-3 mb-4">
+        <div class="col-md-6">
+          <select id="filterRole" class="form-select" data-aos="fade-up">
+            <option value="">Filter by Role</option>
+            <option value="Student">Student</option>
+            <option value="Faculty">Faculty</option>
+            <option value="HOD">HOD</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <select id="filterRating" class="form-select" data-aos="fade-up">
+            <option value="">Filter by Rating</option>
+            <option value="5">5 Stars</option>
+            <option value="4">4 Stars & Up</option>
+            <option value="3">3 Stars & Up</option>
+          </select>
+        </div>
+      </div>
+      <div class="card p-4 mb-4 shadow-sm" data-aos="fade-up">
+        <h4 class="mb-3">Submit Your Review</h4>
+        <form id="reviewForm" novalidate>
+          <input type="text" id="name" class="form-control mb-2" placeholder="Your Name" required data-aos="fade-up"/>
+          <select id="role" class="form-select mb-2" required data-aos="fade-up">
+            <option value="">Select Role</option>
+            <option value="Student">Student</option>
+            <option value="Faculty">Faculty</option>
+            <option value="HOD">HOD</option>
+          </select>
+          <textarea id="message" class="form-control mb-2" rows="3" placeholder="Your Review" required data-aos="fade-up"></textarea>
+          <div class="mb-3" data-aos="fade-up">
+            <label class="form-label">Rating:</label>
+            <div id="starRating" data-aos="fade-up">
+              <span class="star" data-value="1">★</span>
+              <span class="star" data-value="2">★</span>
+              <span class="star" data-value="3">★</span>
+              <span class="star" data-value="4">★</span>
+              <span class="star" data-value="5">★</span>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit Review</button>
+        </form>
+      </div>
+      <div id="reviewsContainer"></div>
+    </div>
+    {% include 'footer.html' %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true })
+    </script>
+    <script src="/static/dist/js/reviews.js"></script>
+  </body>
+</html>

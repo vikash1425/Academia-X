@@ -1,0 +1,14 @@
+.faq-header {
+    background: linear-gradient(to right, #0d6efd, #6610f2);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.accordion-button::after {
+    transition: transform 0.3s ease;
+}
+
+.accordion-button.collapsed::after {
+    transform: rotate(-90deg);
+}

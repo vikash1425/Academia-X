@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | AcademiaX</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link href="/static/dist/css/about.css" rel="stylesheet" />
+  </head>
+  <body class="pt-5">
+    {% include 'header.html' %}
+    <header class="about-header" data-aos="fade-down" style="margin-top: 38px; padding: 1rem 1rem;">
+      <h1>About AcademiaX</h1>
+      <p>Empowering institutions with seamless academic management</p>
+    </header>
+    <main class="container py-5">
+      <div class="row mb-5" data-aos="fade-up">
+        <div class="col-md-6">
+          <h3 class="section-title text-primary">Our Mission</h3>
+          <p>AcademiaX is built to simplify and elevate the academic experience for students, faculty, and administrators. Our goal is to create a unified platform that feels intuitive, responsive, and handcrafted — because education deserves thoughtful design.</p>
+        </div>
+        <div class="col-md-6">
+          <img src="/static/dist/img/mission.jpg" alt="Mission" class="img-fluid rounded shadow-sm" />
+        </div>
+      </div>
+      <div class="row mb-5" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-md-6 order-md-2">
+          <h3 class="section-title text-success">What We Offer</h3>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">✅ Role-based dashboards for HOD, Staff, and Students</li>
+            <li class="list-group-item">✅ Real-time validation, autosave, and toast notifications</li>
+            <li class="list-group-item">✅ Modular design with responsive layouts</li>
+            <li class="list-group-item">✅ Search, filter, and FAQ systems built for clarity</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <img src="/static/dist/img/features.jpg" alt="Features" class="img-fluid rounded shadow-sm" />
+        </div>
+      </div>
+      <div class="row mb-5" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-md-6">
+          <h3 class="section-title text-warning">Our Story</h3>
+          <p>AcademiaX was born out of a desire to make academic tools feel less like software and more like a collaborative experience. Built by passionate developers and educators, our system is constantly evolving to meet real-world needs — with authenticity, craftsmanship, and user-centric design at its core.</p>
+        </div>
+        <div class="col-md-6">
+          <img src="/static/dist/img/story.jpg" alt="Story" class="img-fluid rounded shadow-sm" />
+        </div>
+      </div>
+      <section class="py-5" data-aos="fade-up">
+        <h2 class="text-center mb-4">Our Milestones</h2>
+        <div id="timelineCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner text-center">
+            <div class="carousel-item active">
+              <h5>Launch</h5>
+              <p>AcademiaX goes live with core academic modules and role-based dashboards.</p>
+            </div>
+            <div class="carousel-item">
+              <h5>UI Overhaul</h5>
+              <p>Introduced dark mode, autosave, and toast notifications for smoother UX.</p>
+            </div>
+            <div class="carousel-item">
+              <h5>FAQ & Search System</h5>
+              <p>Added interactive FAQ and dynamic search/filter logic for better navigation.</p>
+            </div>
+            <div class="carousel-item">
+              <h5>Community Expansion</h5>
+              <p>Partnered with institutions and onboarded 1000+ users across departments.</p>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#timelineCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+          <button class="carousel-control-next" type="button" data-bs-target="#timelineCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+        </div>
+      </section>
+      <section class="py-5" data-aos="fade-up" data-aos-delay="100">
+        <h2 class="text-center mb-4">Watch AcademiaX in Action</h2>
+        <div class="ratio ratio-16x9">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/coWDQGBFOUc?si=dtv86Qs0BCTZ3rGA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <p class="text-center mt-3">This walkthrough highlights the thoughtful design and seamless experience that define AcademiaX.</p>
+      </section>
+    </main>
+    {% include 'footer.html' %}
+    <script src="/static/dist/js/about.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true })
+    </script>
+  </body>
+</html>
