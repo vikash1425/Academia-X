@@ -1,15 +1,20 @@
 {
-    "builds": [
-        {
-            "src": "college_management_system/wsgi.py",
-            "use": "@vercel/python",
-            "config": { "maxLambdaSize": "15mb", "runtime": "python3.12" }
-        }
-    ],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "college_management_system/wsgi.py"
-        }
-    ]
+  "version": 2,
+  "builds": [
+    {
+      "src": "college_management_system/wsgi.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/college_management_system/wsgi.py"
+    }
+  ],
+  "env": {
+    "PYTHONPATH": "/vercel/path0",
+    "DISABLE_COLLECTSTATIC": "1",
+    "DEBUG": "False"
+  }
 }
